@@ -162,7 +162,7 @@ coldstart_lisk() {
   pg_ctl initdb -D "$DB_DATA" >> "$SH_LOG_FILE" 2>&1
   sleep 2
   start_postgresql
-  sleep 1
+  sleep 15 # do not use in production
   create_user
   create_database
   populate_database
